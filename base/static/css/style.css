@@ -1,0 +1,62 @@
+body {
+  background: blue;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.login-text {
+  padding: 2rem 0;
+}
+
+.login-box {
+  background: #fff;
+  margin: auto;
+  padding: 10px;
+  width: 30%;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#form-fields {
+  display: grid;
+  padding: 0 1rem;  
+  /* grid-template-columns: 0.; */
+}
+
+.text-label {
+  padding-left: 1rem;
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.text-field {
+  width: auto;
+  margin-left: 1rem;
+}
+
+.checkDIV
+{
+  padding-left: 2rem;
+
+  text-align:left;
+}
+
+#forget-password {
+  float: right;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+

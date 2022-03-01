@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'partials/_alerts.html' %}
+
+<div class="container">
+  <section class="login-box">
+    <h1 class="login-text">
+      Verify Account
+    </h1>
+    <form action="{% url 'verify' %}" method="POST" >
+      <div class="login">
+        {% csrf_token %}
+        <div class="mb-3" id="form-fields">
+          <label for="exampleFormControlInput1" class="form-label text-label">Enter OTP:</label>
+          <input type="text" class=" text-field form-control" id="exampleFormControlInput1" placeholder="Enter email" name="otp">
+        </div>
+
+        <div class="d-grid gap-2">
+          <input type="submit" value="submit" class="btn btn-primary">
+        </div>
+      </div>
+
+    </form>
+  </section>
+</div>
+
+{% endblock %}

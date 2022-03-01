@@ -1,0 +1,69 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+{% if user.is_authenticated %}
+
+  <h1>
+    Already Logged In!
+  </h1>
+
+{% else %}
+
+  <div class="container">
+    <section class="login-box">
+      <h1 class="login-text">
+        Register
+      </h1>
+
+      <form action="{% url 'register' %}" method="POST" class="login">
+        {% csrf_token %}
+        <div class="mb-3" id="form-fields">
+          <label for="exampleFormControlInput1" class="form-label text-label">First Name</label>
+          <input type="text" class=" text-field form-control" id="exampleFormControlInput1" placeholder="Enter First Name" name="first_name">
+        </div>
+
+        <div class="mb-3" id="form-fields">
+          <label for="exampleFormControlInput1" class="form-label text-label">Last Name</label>
+          <input type="text" class=" text-field form-control" id="exampleFormControlInput1" placeholder="Enter Last Name" name="last_name">
+        </div>
+        <div class="mb-3" id="form-fields">
+          <label for="exampleFormControlInput1" class="form-label text-label">Email address</label>
+          <input type="email" class=" text-field form-control" id="exampleFormControlInput1" placeholder="Enter email" name="email">
+        </div>
+
+        <div class="mb-3" id="form-fields">
+          <label for="exampleFormControlInput1" class="form-label text-label">Password</label>
+          <input type="password" class=" text-field form-control" id="exampleFormControlInput1" placeholder="Enter Password" name="password">
+        </div>
+        <div class="mb-3" id="form-fields">
+          <label for="exampleFormControlInput1" class="form-label text-label">Confirm Password</label>
+          <input type="password" class=" text-field form-control" id="exampleFormControlInput1" placeholder="Confirm Password" name="password2">
+        </div>
+
+        <div class="d-grid gap-2">
+          <!-- <button class="btn btn-primary" type="button">Submit</button> -->
+          <input type="submit" value="submit" class="btn btn-primary">
+        </div>
+
+        <div id="forget-password">
+          <p>
+            Have Account? <a href="{% url 'login' %}">Login</a> 
+          </p>
+        </div>
+
+      </form>
+    </section>
+  </div>
+
+{% endif %}
+
+{% endblock %}
+
+
+
+
